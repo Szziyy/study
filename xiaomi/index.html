@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=375, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- 
+        整体头部布局
+        .header>(.headerTop>(.logo+(.search>(.icon+input))+.user))+(.headerBottom>(a*6+span.xhicon)) -->
+
+    <div class="header">
+        <div class="headerTop">
+            <div class="logo"></div>
+            <div class="search">
+                <div class="icon"></div>
+                <input type="text" placeholder="请输入">
+            </div>
+            <div class="user"></div>
+        </div>
+        <div class="headerBottom">
+            <a href="" class="action">推荐</a>
+            <a href="">手机</a>
+            <a href="">智能</a>
+            <a href="">电视</a>
+            <a href="">笔记本</a>
+            <a href="">生活周边</a>
+            <input type="checkbox" hidden="hidden" name="choose" id="choose">
+            <label for="choose" class="chicos"></label>
+            <div class="xlk">
+                <div class="xlkMain">
+                    <div class="xlkTop">全部</div>
+                    <div class="xlkList">
+                        <a href="" class="action">推荐</a>
+                        <a href="">手机</a>
+                        <a href="">电视</a>
+                        <a href="">笔记本</a>
+                        <a href="">智能</a>
+                        <a href="">家电</a>
+                        <a href="">生活周边</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <!-- 轮播图 -->
+    <div class="rotation"></div>
+
+    <!-- 
+        图标列表
+        快捷方式：.iconList>(a.iconItem>img[src="img/icon$.png"])*10      
+     -->
+    <div class="iconList">
+        <a href="" class="iconItem"><img src="img/icon1.png" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon2.webp" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon3.webp" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon4.webp" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon5.webp" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon6.webp" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon7.png" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon8.png" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon9.webp" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon10.png" alt=""></a>
+    </div>       
+    
+    <div class="context"></div>
+
+    <div class="three">
+        <div class="left"></div>
+        <div class="right">
+            <div class="d1"></div>
+            <div class="d2"></div>
+        </div>
+    </div>
+
+    <div class="context"></div>
+
+    <!-- 精品部分的
+    .jp>.jpad+.jpadItem>(a.ipItem>(img[url="img/jp1.png"]+.title{Redmi K30 4G}+.ms{120Hz流速屏，全速热爱}+.jg{￥1399起}+buyBtn{ 立即购买}))*4
+    -->
+
+    <div class="jp">
+        <div class="jpad"></div>
+        <div class="jpadItem">
+            <a href="" class="ipItem">
+                <img src="./img/jp1.png" alt="" url="./img/jp1.png">
+                <span class="title">Redmi K30 4G</span>
+                <span class="ms">120Hz流速屏，全速热爱</span>
+                <span class="jg">￥1399起</span>
+                <div class="btn"> 立即购买</div>
+            </a>
+            <a href="" class="ipItem">
+                <img src="./img/jp1.png" alt="" url="img/jp1.png">
+                <span class="title">Redmi K30 4G</span>
+                <span class="ms">120Hz流速屏，全速热爱</span>
+                <span class="jg">￥1399起</span>
+                <div class="btn"> 立即购买</div>
+
+            </a>
+            <a href="" class="ipItem">
+                <img src="./img/jp1.png" alt="" url="img/jp1.png">
+                <span class="title">Redmi K30 4G</span>
+                <span class="ms">120Hz流速屏，全速热爱</span>
+                <span class="jg">￥1399起</span>
+                <div class="btn"> 立即购买</div>
+            </a>
+            <a href="" class="ipItem">
+                <img src="./img/jp1.png" alt="" url="img/jp1.png">
+                <span class="title">Redmi K30 4G</span>
+                <span class="ms">120Hz流速屏，全速热爱</span>
+                <span class="jg">￥1399起</span>
+                <div class="btn"> 立即购买</div>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- 
+        底部设置
+        footer
+    .footer>(.footerItem>(.itemTop+span))*4
+     -->
+
+    <div class="footer">
+        <div class="footerItem">
+            <div class="itemTop"></div>
+            <span>首页</span>
+        </div>
+        <div class="footerItem">
+            <div class="itemTop"></div>
+            <span>分类</span>
+        </div>
+        <div class="footerItem">
+            <div class="itemTop"></div>
+            <span>星球</span>
+        </div>
+        <div class="footerItem">
+            <div class="itemTop"></div>
+            <span>购物车</span>
+        </div>
+        <div class="footerItem">
+            <div class="itemTop"></div>
+            <span>我的</span>
+        </div>
+    </div>
+</body>
+</html>

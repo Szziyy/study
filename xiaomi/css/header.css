@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* 盒子大小模型设定 */
+    box-sizing: border-box;
+}
+
+.header{
+    width: 375px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* position: relative; */
+}
+
+.headerTop{
+    display: flex;
+    width: 375px;
+    height: 44px;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    background-color:#f2f2f2 ;
+}
+
+.logo{
+    width: 50px;
+    height: 44px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px auto;
+}
+
+.user{
+    width: 50px;
+    height: 44px;
+    background-image: url(../img/user.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px auto;
+}
+
+.search{
+    width: 270px;
+    height: 35px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.search .icon {
+    width: 31px;
+    height: 31px;
+    background-image: url(../img/icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 31px 31px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    /* 设置背景透明 */
+    background: transparent ;
+}
+
+.headerBottom{
+    flex:1;
+    width: 375px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerBottom>a {
+    font-size: 14px;
+    color: #747474;
+    text-decoration: none;
+}
+
+.header .chicos {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/下拉.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    transition: height .5s;
+    position: relative;
+    z-index: 100;
+    transition: transform .8s;
+
+}
+
+.headerBottom>a.action {
+    padding-bottom:2px;
+    color: #ed5b00;
+    border-bottom: 2px solid #ed5b00;
+}
+
+
+.xlk{
+    width: 100vw;
+    height: 100vh;
+    height: 0vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0,0.3);
+    z-index: 10;
+    overflow: hidden;
+    /* padding-left: 10px; */
+}
+
+#choose:checked~.xlk{
+    height: 100vh;
+}
+
+#choose:checked~.xlk .xlkMain{
+    height: 137px;
+}
+
+#choose:checked~.chicos{
+    transform: rotate(180deg);
+}
+
+.xlkMain{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 0;
+    left: 0;
+    top: 44px;
+    background-color: #f2f2f2;
+    transition: height .8s;
+    overflow: hidden;
+
+}
+
+.xlkMain .xlkTop{
+    width: 375px;
+    height: 30px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.xlkMain .xlkList {
+    padding-top: 3px;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 11px;
+    align-content: space-evenly;
+    /* justify-content: space-evenly;
+    align-content: space-evenly; */
+}
+
+.xlkMain .xlkList a {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #fff;
+    margin: 0 10.5px 10px 0;
+    text-decoration: none;
+    color: #747474;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.xlkMain .xlkList a.action{
+    background-color: #fde0d5;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+}
+
+
+
+#choose~choose .chicos{
+    height: 0px;
+}
