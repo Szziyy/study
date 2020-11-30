@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 800px;
+            /* 1.设置父元素高度 */
+            /* height: 800px; */
+            background-color: aqua;
+            margin: 0 auto;
+        }
+
+        .child{
+            float: left;
+            /* display: inline-block; */
+            width: 200px;
+            height: 200px;
+            background-color:seagreen;
+        }
+
+        .clear{
+            /* 2.清除浮动 */
+            clear: both;
+        }
+
+
+        /* 伪元素 */
+        .clear::after{
+            content: '';
+            display: block;
+            clear: both;
+            /* box-sizing: ; */
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 不设置浮动样式的话  div换行会产生间隔 使用浮动去除 -->
+    <div class="parent clear">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="clear"></div>
+    </div>
+
+    <h1>Hello HTML</h1>
+</body>
+</html>
