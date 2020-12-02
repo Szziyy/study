@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 弹性容器 */
+        #app{
+            /* 设置为弹性布局 */
+            display: flex;
+            /* 设置主轴方向 
+            row:从左到右
+            column：从上到下
+            row-reverse：从右到左
+            column-reverse：从下到上
+            */
+            flex-direction: row;
+            /* 设置主轴的内容分布
+                flex-start:向主轴的开始位置靠拢(默认)
+                center：向主轴的中心位置靠拢
+                flex-end:向主轴的结束位置靠拢
+                space-around：平均分布，两边有间距，两边间距是中间的一半
+                space-between：平均分布，两边没有间距
+                space-evenly：（新）平均分布，两边有边距，两边的边距跟中间的一样
+             */
+            justify-content: space-evenly;
+            /* 设置侧轴的内容分布
+                flex-start:向侧轴的开始位置靠拢
+                center：向侧轴的中心位置靠拢
+                flex-end:向侧轴的结束位置靠拢
+                stretch：拉伸（默认值）
+             */
+            align-items: center;
+            /* 换行 flex-wrap
+            nowrap（默认不换行）
+            wrap 换行
+             */
+            flex-wrap: wrap;
+            /* 设置侧轴多行的分布align-content
+                flex-start:向侧轴的开始位置靠拢(默认)
+                center：向侧轴的中心位置靠拢
+                flex-end:向侧轴的结束位置靠拢
+                space-around：平均分布，两边有间距，两边间距是中间的一半
+                space-between：平均分布，两边没有间距
+                space-evenly：（新）平均分布，两边有边距，两边的边距跟中间的一样
+             */
+             align-content: space-around;
+            border: 1px solid slateblue;
+            width: 900px;
+            height: 900px;
+            /* 设置容器内部容器居中 */
+            margin: 0 auto;
+        }
+        /* 弹性子元素 */
+        .a1{
+            width: 300px;
+            height: 100px;
+            background-color: aquamarine;
+            /* flex: 1; */
+        }
+        .a2{
+            width: 300px;
+            height: 100px;
+            background-color: cadetblue;
+            /* flex: 2; */
+        }
+        .a3{
+            width: 300px;
+            height: 100px;
+            background-color: chocolate;
+            /* flex: 3; */
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="a1">1</div>
+        <div class="a2">2</div>
+        <div class="a3">3</div>
+        <div class="a1">1</div>
+        <div class="a2">2</div>
+        <div class="a3">3</div>
+        <div class="a1">1</div>
+        <div class="a2">2</div>
+        <div class="a3">3</div>
+        <div class="a1">1</div>
+        <div class="a2">2</div>
+        <div class="a3">3</div>
+        <div class="a1">1</div>
+        <div class="a2">2</div>
+        <div class="a3">3</div>
+    </div>
+</body>
+</html>
