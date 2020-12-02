@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 50%;
+            height: 300px;
+            background-color: brown;
+        }
+        /* 媒体查询 */
+        /* 移动端的设定 */
+        /* 
+        设定小于600像素像素时候的样式
+         */
+        @media only screen and (max-width: 600px){
+            .d1{
+                width: 100%;
+            }
+        }
+
+         /* 
+        设定大于600像素像素时候的样式
+         */
+         @media only screen and (min-width: 1200px){
+            .d1{
+                width: 25%;
+                background-color: blue;
+            }
+        }
+
+        /* 平板设定 */
+        /* 设定600-1200的样式 */
+        @media only screen and(min-width: 600px) and (max-width: 1200px) {
+            .d1{
+                width: 70%;
+                background-color: red;
+            }
+        }
+        /* 
+        1.并不是所有的页面都需要移动端和PC 端响应，因为如果页面比较复杂，那么代码就会比较凌乱和比较繁多，而且不能更加针对性的设置pc和移动端页面
+        2.使用媒体查询，必须加上meta viewport标签。
+         */
+    </style>
+</head>
+<body>
+    <div class="d1"></div>
+</body>
+</html>
