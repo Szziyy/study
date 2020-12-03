@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            width: 300px;
+            height: 300px;
+            background-color: sienna;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+
+    </div>
+
+    <button onclick="onchange">点击改变颜色</button>
+    <script>
+        // // 1.获取事件源
+        // var btn = document.querySelector('button');
+        // // 2.绑定事件
+        // btn.onclick =
+         function onchange(){
+            var b1 = document.querySelector('#d1');
+            // 3.书写事件驱动程序
+            b1.style.backgroundColor = 'pink';
+        }
+    </script>
+</body>
+</html>

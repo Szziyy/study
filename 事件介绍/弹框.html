@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹窗案例</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 
+    弹窗简写
+    .zhezhao>.alert>(.header>span.title+span.close)+.main+(.footer>(.btn$)*2)
+     -->
+
+    <!-- <div class="zhezhao">
+        <div class="alert">
+            <div class="header"><span class="title">是否添加蓝色方格呢</span><span class="close">X</span></div>
+            <div class="main">  是否添加蓝色方格呢</div>
+            <div class="footer">
+                <div class="btn1">确定</div>
+                <div class="btn2">取消</div>
+            </div>
+        </div>
+    </div> -->
+
+    <button class="btn">弹窗</button>
+
+    <script>
+
+        var btn = document.querySelector(".btn");
+
+        btn.onclick = function(){
+            var zhezhao = document.createElement('div');
+            zhezhao.className = 'zhezhao';
+            zhezhao.innerHTML = ` <div class="alert">
+            <div class="header"><span class="title">是否添加蓝色方格呢</span><span class="close">X</span></div>
+            <div class="main">  是否添加蓝色方格呢</div>
+            <div class="footer">
+                <div class="btn1">确定</div>
+                <div class="btn2">取消</div>
+            </div>
+        </div>`;
+
+        var body = document.querySelector('body');
+
+        body.appendChild(zhezhao)
+            
+        var closeDiv = document.querySelector('.close');
+        var btn1 = document.querySelector('.btn1');
+        var btn2 = document.querySelector('.btn2');
+
+        closeDiv.onclick = function(){
+            body.removeChild(zhezhao);
+        }
+
+        btn1.onclick = function(){
+            var blueDiv = document.createElement('div');
+            blueDiv.className='blueDiv';
+            body.appendChild(blueDiv);
+            
+            body.removeChild(zhezhao);
+        }
+
+        btn2.onclick = function(){
+            body.removeChild(zhezhao);
+        }
+
+        }
+
+        
+    </script>
+
+</body>
+</html>
