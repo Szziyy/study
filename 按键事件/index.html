@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <script>
+        var inputDom = document.querySelector('#username');
+
+        var divDom = document.createElement('div');
+        divDom.style.width = "200px";
+        divDom.style.height = "200px";
+        divDom.style.lineHeight = "200px";
+        divDom.style.fontSize = "50px";
+        divDom.style.position = "fixed";
+        divDom.style.backgroundColor = "rgba(0,0,0,.5)";
+        divDom.style.left = "calc(50% - 100px)";
+        divDom.style.top = "calc(50% - 100px)";
+        divDom.style.textAlign = "center";
+
+        document.body.appendChild(divDom);
+
+        //  键盘按下事件
+        inputDom.onkeydown = function(e){
+            console.log(e)
+            divDom.innerHTML = event.key;
+        } 
+        //  键盘按下事件
+        inputDom.onkeypress = function(e){
+            console.log(e)
+        }
+        // 键盘抬起事件
+        inputDom.onkeyup = function(e){
+            console.log(e)
+        }
+    </script>
+</body>
+</html>
