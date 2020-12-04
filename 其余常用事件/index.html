@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <select name="city" id="selectDiv">
+        <option value="guangd">广东</option>
+        <option value="dongbei">东北</option>
+        <option value="hubei">湖北</option>
+        <option value="hunan">湖南</option>
+    </select>
+
+    <script>
+        var usernameDiv = document.querySelector("#username");
+        // 获取焦点事件
+        usernameDiv.onfocus = function(e){
+            console.log(e);
+        }
+        // 失去焦点事件
+        usernameDiv.onblur = function(e){
+            console.log(e);
+        }
+        var selectDiv = document.querySelector("#selectDiv");
+        // 事件改变事件
+        selectDiv.onchange = function(e){
+            console.log(e.target.value);
+        }
+    </script>
+</body>
+</html>

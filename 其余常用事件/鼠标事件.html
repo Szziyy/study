@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dv{
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="dv"></div>
+
+    <script>
+        var dv = document.querySelector(".dv");
+        // 鼠标点击开始执行
+        var isDraw = false;
+
+        // 鼠标进入事件
+        dv.onmouseenter = function(e){
+            console.log(e);
+            dv.style.backgroundColor = "red";
+        }
+
+        // 鼠标离开事件
+        dv.onmouseleave = function(e){
+            console.log(e);
+            dv.style.backgroundColor = "blue";
+        }
+        dv.onmouseout = function(e){
+            console.log(e);
+            dv.style.backgroundColor = "blue";
+        }
+
+        // 鼠标在元素上移动事件
+        dv.onmousemove = function(e){
+            console.log(e);
+            // dv.style.backgroundColor = "blue";
+            if(isDraw){
+                var createDiv = document.createElement('div');
+                createDiv.style.width = '10px';
+                createDiv.style.height = '10px';
+                // 获取鼠标当前的位置
+                var x = e.pageX;
+                var y = e.pageY;
+            
+                createDiv.style.position = 'absolute';
+                createDiv.style.left = (x-5)+'px';
+                createDiv.style.top = (y-5)+'px';
+
+                createDiv.style.backgroundColor = 'yellow';
+                createDiv.style.borderRadius = '5px';
+
+                dv.appendChild(createDiv);
+            }
+            
+        }
+
+        // 点击事件
+        dv.onclick = function(){
+            isDraw = !isDraw;
+        }
+        // 鼠标双击事件
+        // dv.ondbclick = function(){
+        //     isDraw = false;
+        // }
+
+        // // 鼠标按下事件
+        // dv.onmousedown = function(e){
+        //     console.log(e);
+        //     dv.style.backgroundColor = "red";
+        // }
+
+        // // 鼠标抬起事件
+        // dv.onmouseup = function(e){
+        //     console.log(e);
+        //     dv.style.backgroundColor = "blue";
+        // }
+    </script>
+</body>
+</html>
