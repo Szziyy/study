@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.fdj{
+    width: 1200px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.left{
+    width: 600px;
+    height: 450px;
+    background-image: url(../img/zp.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.zhezhao{
+    width: 300px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    position: absolute;
+}
+
+.right{
+    display: none;
+    width: 600px;
+    height: 450px;
+    background-image: url(../img/zp.jpg);
+    background-size: 1200px 900px;
+    background-position: 0 0;
+}
+
