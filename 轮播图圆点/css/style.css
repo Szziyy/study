@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.swiper{
+    width: 1226px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.swiper>.imgList {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper>.imgList>.imgItem{
+    width: 100%;
+    height: 100%;
+    background-size: 100% ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.swiper>.imgList>.imgItem.active{
+   opacity: 1;
+}
+
+
+.swiper .btn.pre{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    top: calc(50% - 35px);
+    left: 0;
+}
+
+.swiper .btn.next{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    /* calc中间需要空格才能实现 */
+    top: calc(50% - 35px);
+    right: 0;
+}
+
+.radiosList{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+}
+
+.radiosList>.radiosItem{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    background-color: #666;
+    margin: 0 10px;
+}
+
+.radiosList>.radiosItem.active{
+    background-color: #ccc;
+}
