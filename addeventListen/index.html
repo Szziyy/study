@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件绑定事件</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <script>
+        var btn = document.querySelector('#btn');
+
+        btn.onclick = function(){
+            var div = document.createElement('div');
+            div.innerHTML= '这是事件绑定监听事件'
+            document.body.appendChild(div);
+        }
+
+        var fn = function(){
+            document.body.style.backgroundColor = 'skyblue';
+        }
+        btn.addEventListener('click',fn);
+
+        btn.addEventListener('click',function(){
+            var div = document.createElement('div');
+            div.innerHTML= '这是事件绑定事件创建的'
+            document.body.appendChild(div);
+        });
+    </script>
+</body>
+</html>

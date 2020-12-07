@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捕获</title>
+</head>
+<body>
+    <div class="parent"> 
+        <div class="child">
+            <button>按钮</button>
+        </div>
+    </div>
+    <script>
+        var btn = document.querySelector('button');
+        var child = document.querySelector('.child');
+        var parent = document.querySelector('.parent');
+        var body = document.body;
+        var html = document.querySelector('html');
+
+        //  事件监听默认为false
+        btn.addEventListener('click',function(){
+            console.log('btn linstener');
+        },true)
+        child.addEventListener('click',function(){
+            console.log('body linstener');
+        },true)
+        parent.addEventListener('click',function(){
+            console.log('parent linstener');
+        },true)
+        body.addEventListener('click',function(){
+            console.log('body linstener');
+        },true)
+        html.addEventListener('click',function(){
+            console.log('html linstener');
+        },true)
+    </script>
+</body>
+</html>
