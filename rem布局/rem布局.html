@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem布局的使用</title>
+    <style>
+        div{
+            width: 5rem;
+            height: 5rem;
+            font-size: 1rem;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- rem布局的使用 -->
+    <div>
+        rem布局的使用
+    </div>
+
+    <script>
+
+        // 屏幕改变的函数
+        window.onresize = function(){
+            pmbh();
+        }
+
+        function pmbh(){
+            var kd = window.innerWidth;
+            var danwei = kd/10;//获取屏幕的宽度/10 得到1rem的
+            var html = document.querySelector('html');
+            html.style.fontSize = danwei + 'px';
+        }
+        pmbh();
+    </script>
+</body>
+</html>
