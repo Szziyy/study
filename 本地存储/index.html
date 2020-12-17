@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 存放数据
+        localStorage.newTitle = '这是本地存储的标题';
+        localStorage['actuor'] = 'sue';
+        // 函数调用 传入属性加内容
+        localStorage.setItem('context','这是本地存储的内容');
+
+        // 取数据
+        document.write('<h1>'+localStorage.newTitle+'</h1>');
+        document.write('<h2>'+localStorage['actuor']+'</h2>');
+        document.write('<p>'+localStorage.getItem('context')+'</p>');
+        console.log(localStorage);
+
+        // 清除数据 clear 清除全部数据 removeItem 清除指定的某一条数据
+        localStorage.removeItem('actuor');
+        localStorage.clear();
+
+    </script>
+</body>
+</html> 
