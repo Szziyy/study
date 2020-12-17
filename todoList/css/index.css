@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #efefef;
+    font-size: 16px;
+}
+
+.header{
+    width: 3.75rem;
+    height: 0.5rem;
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header>.logo{
+    width: 1.2rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    font-size: 0.2rem;
+}
+
+.header>input{
+    width: 2.2rem;
+    height: 0.3rem;
+    border-radius: 0.05rem;
+    padding-left: 0.05rem;
+    margin: 0 0.2rem;
+    border: none;
+    outline: none;
+}
+
+.todo>h3{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.1rem 0.1rem;
+}
+.todo .todoItem{
+    display: flex;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    align-items: center;
+    background-color: skyblue;
+    margin: 0.1rem 0.1rem;
+    border-left: 0.1rem solid sandybrown;
+    border-radius: 0.05rem;
+} 
+
+.todo .todoItem>.context{
+    width: 2.65rem;
+    color: #333333;
+}
+
+.todo .todoItem>input{
+    width: 0.25rem;
+    height: 0.25rem;
+    margin: 0 0.05rem;
+}
+
+.todo .todoItem>.del{
+    width: 0.5rem;
+    height: 0.25rem;
+    line-height: 0.25rem;
+    text-align: center;
+    background-color: tomato;
+    border-radius: 0.05rem;
+    margin: 0 0.05rem;
+}
+
+.done.todo .todoItem{
+    /* 透明度 */
+    /* opacity: 0.4; */
+    -webkit-filter: grayscale(1);
+} 

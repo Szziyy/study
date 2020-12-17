@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/lcXys.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!-- 
+        待办事项网页要求：
+        1、移动端为主/pc端可用
+        2、输入框：输入待办事项
+        3、未成列表：能够显示出未完成的内容，已经可以对每一项内容，进行修改（改完成，删除）
+        4、完成列表：能够显示完成的内容，可对每一项内容进行修改（改成未完成，删除）
+
+        项目制作顺序：
+        1、写html结构
+        2、css样式
+        3、JavaScript功能
+            输入框的输入功能
+            未完成列表的显示功能
+            完成列表的显示功能
+            修改和删除列表的功能
+    -->
+    <div class="main">
+        <div class="header">
+            <div class="logo">SueTodo</div>
+            <input type="text" id="input" placeholder="请输入待办事项">
+        </div>
+        <div class="doing todo">
+            <h3><span class="title">正在进行</span><span class="num">0</span></h3>
+            <div class="list">
+            </div>
+        </div>
+        <div class="done todo">
+            <h3><span class="title">已完成</span><span class="num">0</span></h3>
+            <div class="list">
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
